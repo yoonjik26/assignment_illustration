@@ -63,10 +63,10 @@ function draw() {
 	} else {
 		image(blanketImage, 0, 0);
 	}
-	if (mouseX > 70 && mouseX < 300 && mouseY < 110 && mouseY > 50) {
+	if (mouseX > 70 && mouseX < 270 && mouseY < 110 && mouseY > 30) {
 		image(findImage, 0, 0);
 	} else {
 		image(missionImage, 0, 0);
 	}
-}	
+}
 
