@@ -69,4 +69,10 @@ function draw() {
 		image(missionImage, 0, 0);
 	}
 }
+function mousePressed() {
+	if (mouseX > 550 && mouseX < 750 && mouseY > 310 && mouseY < 500) {
+	image(girlImage, 0, 0);
+	image(starImage, 0, 0);
+}
+}
 
