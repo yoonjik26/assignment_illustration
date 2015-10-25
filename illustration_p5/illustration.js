@@ -8,6 +8,9 @@ var bookImage;
 var catImage;
 var blanketImage;
 var girlImage;
+var findImage;
+var missionImage;
+var starImage;
 
 function preload() {
 	backgroundImage = loadImage("images/background.png");
@@ -20,6 +23,9 @@ function preload() {
 	catImage = loadImage("images/cat.png");
 	blanketImage = loadImage("images/blanket.png");
 	girlImage = loadImage("images/girl.png");
+	findImage = loadImage("images/find.png");
+	missionImage = loadImage("images/mission.png");
+	starImage = loadImage("images/star.png");
 }
 
 function setup() {
@@ -53,7 +59,14 @@ function draw() {
 	}
 	if (mouseX > 550 && mouseX < 750 && mouseY > 310 && mouseY < 500 && mouseIsPressed) {
 		image(girlImage, 0, 0);
+		image(starImage, 0, 0);
 	} else {
 		image(blanketImage, 0, 0);
 	}
-}
+	if (mouseX > 70 && mouseX < 300 && mouseY < 110 && mouseY > 50) {
+		image(findImage, 0, 0);
+	} else {
+		image(missionImage, 0, 0);
+	}
+}	
+
