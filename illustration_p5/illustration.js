@@ -12,6 +12,8 @@ var findImage;
 var missionImage;
 var starImage;
 
+var isGirlPressed, isMissionPressed;
+
 function preload() {
 	backgroundImage = loadImage("images/background.png");
 	openImage = loadImage("images/open.png");
@@ -26,6 +28,9 @@ function preload() {
 	findImage = loadImage("images/find.png");
 	missionImage = loadImage("images/mission.png");
 	starImage = loadImage("images/star.png");
+
+	isGirlPressed = false;
+	isMissionPressed = false;
 }
 
 function setup() {
@@ -57,13 +62,13 @@ function draw() {
 	} else {
 		image(bookImage, 0, 0);
 	}
-	if (mouseX > 550 && mouseX < 750 && mouseY > 310 && mouseY < 500 && mouseIsPressed) {
+	if (isGirlPressed) {
 		image(girlImage, 0, 0);
 		image(starImage, 0, 0);
 	} else {
 		image(blanketImage, 0, 0);
 	}
-	if (mouseX > 70 && mouseX < 270 && mouseY < 110 && mouseY > 30) {
+	if (isMissionPressed) {
 		image(findImage, 0, 0);
 	} else {
 		image(missionImage, 0, 0);
@@ -71,8 +76,10 @@ function draw() {
 }
 function mousePressed() {
 	if (mouseX > 550 && mouseX < 750 && mouseY > 310 && mouseY < 500) {
-	image(girlImage, 0, 0);
-	image(starImage, 0, 0);
-}
+		isGirlPressed = !isGirlPressed;
+	}
+	if (mouseX > 70 && mouseX < 270 && mouseY < 110 && mouseY > 30) {
+	  isMissionPressed = !isMissionPressed;
+	}
 }
 
